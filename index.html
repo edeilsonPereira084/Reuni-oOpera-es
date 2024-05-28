@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reunião Gerencial</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="apple-icon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="header">
+        <img src="Nordestao-logo.png" alt="Logo da Empresa" id="logo">
+        <h1>Pautas Reunião Gerencial</h1>
+    </div>
+    <form id="meetingForm">
+        <div>
+            <label for="sector">Setor:</label>
+            <input type="text" id="sector" name="sector" required>
+            <span class="error-message" id="sector-error"></span>
+        </div>
+        <div>
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+            <span class="error-message" id="name-error"></span>
+        </div>
+        <div>
+            <label for="subject">Assunto:</label>
+            <input type="text" id="subject" name="subject" required>
+            <span class="error-message" id="subject-error"></span>
+        </div>
+        <div>
+            <label for="summary">Resumo:</label>
+            <textarea id="summary" name="summary" required></textarea>
+            <span class="error-message" id="summary-error"></span>
+        </div>
+        <div>
+            <label for="duration">Duração sugerida (minutos):</label>
+            <input type="number" id="duration" name="duration" min="1" required>
+            <span class="error-message" id="duration-error"></span>
+        </div>
+        <div>
+            <label for="file">Anexo:</label>
+            <input type="file" id="file" name="file">
+        </div>
+        <div id="removeAttachmentContainer" style="display: none;">
+            <label for="removeAttachment">Remover anexo:</label>
+            <input type="checkbox" id="removeAttachment" name="removeAttachment">
+        </div>
+        <button type="submit">Adicionar Pauta</button>
+    </form>
+    <ul id="meetingItems"></ul>
+    <button id="toggleModeButton" aria-label="Toggle theme">
+        <span id="theme-icon">🌙</span>
+    </button>
+    <footer>
+        <p>Criado por Edeilson by Operações e Vendas &copy; 2024</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
